@@ -1,0 +1,13 @@
+[phases.setup]
+nixPkgs = ['python311', 'pip']
+
+[phases.install]
+cmds = [
+  'pip install --upgrade pip',
+  'pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121',
+  'pip install -r requirements.txt'
+]
+
+[start]
+cmd = 'python cheetah_detector_app.py'
+
