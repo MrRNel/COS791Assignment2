@@ -1,0 +1,6 @@
+venv/
+cheetah_detection/*
+cheetah_finetune/*
+video_detection/*
+.cursor
+.gradio
