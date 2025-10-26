@@ -79,9 +79,8 @@ def main():
     print("\nStep 2: Installing PyTorch with CUDA 12.1 support...")
     
     # Use appropriate PyTorch installation based on OS
-    if is_windows:
-        pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121"
-    elif is_linux:
+    if is_windows or is_linux:
+        # Windows and Linux: use --index-url for CUDA support (no version suffix needed)
         pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121"
     elif is_mac:
         # Mac typically uses MPS backend, or CPU-only
@@ -94,10 +93,32 @@ def main():
     
     # Step 3: Install remaining requirements from requirements.txt
     print("\nStep 3: Installing remaining dependencies from requirements.txt...")
-    run_command(
-        f"{sys.executable} -m pip install -r requirements.txt",
-        "Installing dependencies from requirements.txt"
-    )
+    
+    # On Linux/Windows, skip torch/torchvision in requirements.txt since we install them with --index-url
+    if is_windows or is_linux:
+        # Create a temporary requirements file without torch/torchvision
+        import tempfile
+        temp_requirements = tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.txt')
+        with open('requirements.txt', 'r') as f:
+            for line in f:
+                if not line.strip().startswith('torch==') and not line.strip().startswith('torchvision=='):
+                    temp_requirements.write(line)
+        temp_requirements.close()
+        
+        run_command(
+            f"{sys.executable} -m pip install -r {temp_requirements.name}",
+            "Installing dependencies from requirements.txt"
+        )
+        
+        # Clean up temp file
+        import os
+        os.unlink(temp_requirements.name)
+    else:
+        # Mac or other: use requirements.txt as-is
+        run_command(
+            f"{sys.executable} -m pip install -r requirements.txt",
+            "Installing dependencies from requirements.txt"
+        )
     
     # Step 4: Verify installation
     print("\nStep 4: Verifying installation...")
