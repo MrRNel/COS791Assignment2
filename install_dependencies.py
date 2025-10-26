@@ -57,12 +57,23 @@ def main():
         print("Please run this script from the project root directory.")
         sys.exit(1)
     
-    # Step 1: Upgrade pip
-    print("\nStep 1: Upgrading pip...")
-    run_command(
-        f"{sys.executable} -m pip install --upgrade pip",
-        "Upgrading pip"
-    )
+    # Step 1: Install pip if not available, then upgrade
+    print("\nStep 1: Ensuring pip is available...")
+    try:
+        # Check if pip is available
+        subprocess.run([sys.executable, "-m", "pip", "--version"], check=True, capture_output=True)
+        print("pip is available, upgrading...")
+        run_command(
+            f"{sys.executable} -m pip install --upgrade pip",
+            "Upgrading pip"
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        print("pip is not available, installing...")
+        # Install pip using ensurepip
+        run_command(
+            f"{sys.executable} -m ensurepip --upgrade --default-pip",
+            "Installing pip"
+        )
     
     # Step 2: Install PyTorch with CUDA 12.1 from PyTorch index
     print("\nStep 2: Installing PyTorch with CUDA 12.1 support...")
