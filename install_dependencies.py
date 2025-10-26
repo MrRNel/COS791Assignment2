@@ -13,6 +13,7 @@ Usage:
 import subprocess
 import sys
 import os
+import platform
 
 
 def run_command(command, description):
@@ -43,6 +44,13 @@ def main():
     print("COS791 Assignment 2 - Dependency Installation")
     print("="*60)
     
+    # Detect OS
+    is_windows = platform.system() == "Windows"
+    is_linux = platform.system() == "Linux"
+    is_mac = platform.system() == "Darwin"
+    
+    print(f"\nDetected OS: {platform.system()} ({platform.release()})")
+    
     # Check if we're in the right directory
     if not os.path.exists("requirements.txt"):
         print("\nERROR: requirements.txt not found!")
@@ -58,10 +66,20 @@ def main():
     
     # Step 2: Install PyTorch with CUDA 12.1 from PyTorch index
     print("\nStep 2: Installing PyTorch with CUDA 12.1 support...")
-    run_command(
-        f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121",
-        "Installing PyTorch and TorchVision with CUDA support"
-    )
+    
+    # Use appropriate PyTorch installation based on OS
+    if is_windows:
+        pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121"
+    elif is_linux:
+        pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121"
+    elif is_mac:
+        # Mac typically uses MPS backend, or CPU-only
+        pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1"
+    else:
+        # Default fallback
+        pytorch_command = f"{sys.executable} -m pip install torch==2.5.1 torchvision==0.20.1"
+    
+    run_command(pytorch_command, "Installing PyTorch and TorchVision with CUDA support")
     
     # Step 3: Install remaining requirements from requirements.txt
     print("\nStep 3: Installing remaining dependencies from requirements.txt...")
