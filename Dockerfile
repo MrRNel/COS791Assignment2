@@ -36,8 +36,11 @@ COPY cheetah_data/ cheetah_data/
 COPY yolo12n.pt .
 COPY yolo12s.pt .
 
-# Create output directories
-RUN mkdir -p cheetah_detection output
+# Create output directories and best_run structure
+RUN mkdir -p cheetah_detection/best_run output
+
+# Copy the trained model
+COPY cheetah_detection/best_run/ cheetah_detection/best_run/
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
