@@ -25,7 +25,7 @@
 \maketitle
 
 \begin{abstract}
-This paper presents a comprehensive evaluation of training YOLOv12 for wildlife object detection using a specialized cheetah dataset. The study explores the practical application of YOLO architectures for animal detection tasks with limited domain-specific data, leveraging transfer learning from COCO-pretrained YOLOv12-nano model. Training was conducted on 379 images with 21 validation samples and evaluated on 46 test images including negative examples. Experimental results demonstrate exceptional performance with precision of 1.0, recall of 0.897, F1-score of 0.946, and single-cheetah detection accuracy of 94.6\%. The model achieved zero false positives on tiger images while maintaining perfect precision. However, critical limitations emerge including complete failure on multi-cheetah scenes (0\% accuracy), highlighting inherent weaknesses in YOLO architectures for complex multi-object wildlife detection scenarios. The analysis examines YOLO's theoretical evolution, practical weaknesses, training configurations, and performance characteristics to provide insights for conservation and wildlife monitoring applications.
+In this paper the training of YOLOv12 for wildlife object detection using a cheetah dataset was evaluated. The study assessed the application of YOLO architectures for animal detection. Animal detection was performed using limited domain-specific data, and leveraging transfer learning from a COCO-pretrained YOLOv12-nano model. The training was done using 379 images with 21 validation samples. The efficacy of the training was evaluated with the use of 46 test images which included negative examples. The results indicated that the system performed well with an accuracy of 1.0, a recall of 0.897, an F1-score of 0.946, and had a single-cheetah detection accuracy of 94.6\%. The model did not generate any false positive results on tiger images and remained 100\% accurate. However, the model showed limitations such as 0\% accuracy when used on images with more than one cheetah. YOLO's theoretical evolution, practical weaknesses, training configurations, and performance characteristics was investigated through comparative and mathematical analysis.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -34,13 +34,11 @@ YOLO, object detection, wildlife conservation, transfer learning, fine-tuning, c
 
 \section{Introduction}
 
-Object detection algorithms have become essential tools for biodiversity monitoring and wildlife management. YOLO (You Only Look Once) architectures provide real-time performance, but effectiveness depends on dataset size, image quality, and scene complexity \cite{b3}.
+Object detection systems play an important role in biodiversity monitoring and wildlife management. A popular object detection library that is often used is YOLO (You Only Look Once). YOLO systems provide real-time performance, but their efficacy depends on dataset size, image quality, and scene complexity \cite{b3}.
 
-Critical challenges include generalizing across diverse scenarios—single-object detection, multi-object scenes, and negative examples. To address this, I evaluate YOLOv12-nano on a cheetah detection dataset.
+Shortfalls in this detection library include; failure to generalize across diverse scenarios in single-object detection, multi-object scenes, and negative examples. In this paper, YOLOv12-nano was evaluated on a cheetah detection dataset.
 
-Using a dataset of 379 training images, 21 validation images, and 46 test images (including 8 negative tiger samples), I fine-tuned a COCO-pretrained YOLOv12-nano model for single-class cheetah detection. Findings indicate precision of 1.0, recall of 0.897, F1-score of 0.946, and 94.6\% single-cheetah detection accuracy with zero false positives on similar tiger images. While multi-cheetah scenarios show detection possible with image size and confidence tuning, there is no universal configuration across all scenarios, reinforcing that YOLO architectures require task-specific parameters.
-
-This paper structures as follows: Section II provides theoretical background on YOLO evolution, architectural components, and training strategies; Section III analyzes practical weaknesses; Section IV details the model design and implementation; Section V presents experimental results; Section VI offers critical analysis and conclusions.
+This paper is structured as follows: Section II provides theoretical background on YOLO evolution, architectural components, and training strategies; Section III analyzes practical weaknesses; Section IV details the model design and implementation; Section V presents experimental results; Section VI offers critical analysis and conclusions.
 
 \section{Background}
 
@@ -90,13 +88,13 @@ YOLO's practical weaknesses include:
 
 \subsection{Dataset Preparation and Characteristics}
 
-The dataset contains 379 training images, 21 validation images, and 46 test images (including 8 negative tiger samples). All images are resized to 400×400 pixels. Labels were created using Label Studio and exported to YOLO format with normalized bounding box coordinates (class\_id x\_center y\_center width height). However, even with the Label Studio export, some data corruption occurred during export. As a result, my custom validation function (`validate\_dataset()`) was developed to detect and identify data anomalies, verify label formatting, and ensure dataset structural integrity. The dataset analysis function (`analyze\_dataset()`) computes object counts, bounding box area statistics, and aspect ratio distributions across different splits.
+The dataset contained 379 training images, 21 validation images, and 46 test images (including 8 negative tiger samples). All images were resized to 400×400 pixels. Labels were created using Label Studio and exported to YOLO format with normalized bounding box coordinates (class\_id x\_center y\_center width height). However, even with the Label Studio export, some data corruption occurred during export. As a result, a custom validation function (`validate\_dataset()`) was developed to detect and identify data anomalies, verify label formatting, and ensure dataset structural integrity. The dataset analysis function (`analyze\_dataset()`) computed object counts, bounding box area statistics, and aspect ratio distributions across different splits.
 
 \subsection{YOLOv12 Configuration and Hyperparameter Selection Based on Multiple Runs}
 
-YOLOv12-nano (`yolo12n.pt`) pretrained on COCO was selected after extensive experimentation. Initial training from scratch produced numerous false detections, multiple objects detected when only one was present, and bounding box localization errors (boxes either too small or too large despite achieving 2–3 false positives on tiger images). Switching to a COCO-pretrained model eliminated false detections and improved localization, validating transfer learning. The nano architecture also performed better with significantly less computational resources, making hyperparameter tuning much easier and faster across multiple runs. On my RTX 4060 GPU, the nano architecture allowed me to use much larger batch sizes (batch=95) compared to larger model variants, enabling faster training while maintaining memory efficiency. The training configuration includes epochs=100, batch=95, image size=400×400, optimizer=AdamW with initial learning rate=0.001 and final learning rate fraction=0.1 (cosine decay). Loss weights are set to box=10.0, cls=1.5, dfl=2.0.
+YOLOv12-nano (`yolo12n.pt`) pretrained on COCO was selected. Initial training from scratch produced numerous false detections and bounding box errors. A COCO-pretrained model was used instead, which eliminated false detections. Using an RTX 4060 GPU, the nano architecture allowed for larger batch sizes (batch=95). The training configuration included epochs=100, batch=95, image size=400×400, and optimizer=AdamW with initial learning rate=0.001. Loss weights were set to box=10.0, cls=1.5, dfl=2.0.
 
-Batch size 95 was selected based on comprehensive analysis across multiple runs. Early experiments with smaller batch sizes (16–18) and fewer epochs (30–60) achieved significant single-cheetah accuracy (97.3–100\%) but suffered from high false positive rates on tiger images (88.9\% false positives). However, these configurations failed to eliminate false detections completely. Only when extending training to above 80 epochs with very large batch sizes (95) did I achieve zero false positives on tiger images while maintaining high single-cheetah accuracy (94.6\%). The AdamW optimizer with warmup epochs stabilizes training across all configurations. Loss weights emphasize bounding box accuracy over classification, which improves convergence for limited data.
+Batch size 95 was selected based on comprehensive analysis across multiple runs. Early experiments with smaller batch sizes (16–18) and fewer epochs (30–60) achieved significant single-cheetah accuracy (97.3–100\%) but suffered from high false positive rates on tiger images (88.9\% false positives). However, these configurations failed to eliminate false detections completely. Only when extending training to above 80 epochs with very large batch sizes (95) were zero false positives on tiger images achieved while maintaining high single-cheetah accuracy (94.6\%). The AdamW optimizer with warmup epochs stabilizes training across all configurations. Loss weights emphasize bounding box accuracy over classification, which improves convergence for limited data.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.45\textwidth]{enhanced_validation_batch16.png}}
@@ -104,15 +102,15 @@ Batch size 95 was selected based on comprehensive analysis across multiple runs.
 \label{fig:batch16_results}
 \end{figure}
 
-Image size 400×400 matches dataset image dimensions, eliminating unnecessary resizing. I initially experimented with different image sizes but reverted to 400×400 because the bounding boxes were misaligned on test data due to upscaling artifacts that cause bounding box annotations to break on 400×400 training and validation images. While testing with multiple objects showed that larger image sizes resulted in more accurate multi-object detections, insufficient training data in my dataset prevented effective generalization for multiple detections, necessitating the use of native 400×400 resolution.
+Image size 400×400 was used to match dataset image dimensions. Different image sizes were initially tested but reverted to 400×400. The bounding boxes were misaligned on test data due to upscaling artifacts. Larger image sizes showed more accurate multi-object detections, but insufficient training data prevented effective generalization. The native 400×400 resolution was used.
 
 \subsection{Training Strategy and Hyperparameters}
 
-My custom training pipeline class (`YOLOv12CheetahTrainer`) implements seed=42 for reproducibility, warmup=5 epochs, mixed precision training (AMP), and disables mosaic augmentation in the last 20 epochs. Mosaic augmentation combines four different images to create complex synthetic training examples, which aids generalization during early training but can introduce unrealistic spatial relationships and boundary artifacts. Disabling mosaic in the final epochs allows the model to fine-tune on actual real-world image structures, improving bounding box accuracy and reducing false positives by learning precise localization without geometric distortion. Data augmentation includes Mosaic (0.5), Copy-Paste (0.2), HSV color shifts (h=0.5, s=0.5, v=0.5), translation (0.1), scaling (0.2), horizontal flip (0.5), RandAugment, and random erasing (0.1).
+The custom training pipeline class (`YOLOv12CheetahTrainer`) implemented seed=42 for reproducibility, warmup=5 epochs, mixed precision training (AMP), and disabled mosaic augmentation in the last 20 epochs. Mosaic augmentation was disabled in final epochs to improve bounding box accuracy. Data augmentation included Mosaic (0.5), Copy-Paste (0.2), HSV color shifts, translation (0.1), scaling (0.2), horizontal flip (0.5), RandAugment, and random erasing (0.1).
 
 \subsection{Complete Training Pipeline Architecture}
 
-My implementation uses a custom `YOLOv12CheetahTrainer` class that orchestrates the entire workflow. The pipeline consists of seven sequential steps: (1) dataset validation—custom functions verify label integrity and format compliance; (2) dataset analysis—computes bounding box statistics and creates visualizations; (3) model training—loads COCO-pretrained YOLOv12-nano weights and trains for 100 epochs; (4) validation on unlabeled data—tests generalization on 21 validation images; (5) threshold sweep—automatically determines optimal confidence threshold (0.35) via grid search; (6) model testing—evaluates on 46 test images with selected thresholds; (7) report generation—produces comprehensive markdown and JSON summaries.
+The implementation uses a custom `YOLOv12CheetahTrainer` class that orchestrates the entire workflow. The pipeline consists of seven sequential steps: (1) dataset validation—custom functions verify label integrity and format compliance; (2) dataset analysis—computes bounding box statistics and creates visualizations; (3) model training—loads COCO-pretrained YOLOv12-nano weights and trains for 100 epochs; (4) validation on unlabeled data—tests generalization on 21 validation images; (5) threshold sweep—automatically determines optimal confidence threshold (0.35) via grid search; (6) model testing—evaluates on 46 test images with selected thresholds; (7) report generation—produces comprehensive markdown and JSON summaries.
 
 The model is initialized using Ultralytics YOLO framework with `yolo12n.pt` pretrained weights. Training employs automatic mixed precision (AMP) for efficiency, deterministic seed (42) for reproducibility, and custom callback monitoring for early stopping and checkpoint saving. The pipeline automatically saves all results, visualizations, and model checkpoints to timestamped run directories, enabling systematic comparison across hyperparameter configurations.
 
@@ -128,7 +126,7 @@ Custom metric calculations compute Precision = $\frac{TP}{TP + FP}$, Recall = $\
 
 For test results, the evaluation counts images as correctly detected by comparing the number of predictions against expected detections for each scenario type: tiger images (0 detections expected), single-cheetah images (exactly 1 detection expected), and multi-cheetah images (multiple detections expected).
 
-A threshold sweep tests different confidence cutoff values (from 10\% to 71\% at 5\% intervals) on validation images with known ground truth. By measuring performance at each threshold, I automatically select the confidence value that produces the best balance of precision and recall (F1-score), ensuring optimal detection parameters are used for inference.
+A threshold sweep tests different confidence cutoff values (from 10\% to 71\% at 5\% intervals) on validation images with known ground truth. By measuring performance at each threshold, the confidence value that produces the best balance of precision and recall (F1-score) was automatically selected, ensuring optimal detection parameters are used for inference.
 
 \section{Results and Model Performance}
 
@@ -152,7 +150,7 @@ Figure \ref{fig:validation_curves} presents validation accuracy analysis across 
 
 \subsection{Validation and Test Set Results}
 
-Final metrics from the test set: mAP@0.5: 0.8201, mAP@0.5:0.95: 0.4154, precision: 0.8809, recall: 0.7083. Enhanced validation analysis shows single-cheetah detection accuracy of 94.6\% (35/37 correct), zero false positives on tiger images (perfect precision), and complete failure on multi-cheetah scenes (0\% accuracy).
+Final metrics from the test set were: mAP@0.5: 0.8201, mAP@0.5:0.95: 0.4154, precision: 0.8809, recall: 0.7083. Enhanced validation analysis showed single-cheetah detection accuracy of 94.6\% (35/37 correct), zero false positives on tiger images (perfect precision), and complete failure on multi-cheetah scenes (0\% accuracy).
 
 Figure \ref{fig:enhanced_validation} illustrates the comprehensive breakdown of detection performance across scenario types, highlighting the model's strengths in single-object detection and limitations in multi-object scenarios.
 
@@ -170,7 +168,7 @@ The model correctly identifies all 8 tiger images as negative (zero false positi
 
 Additional performance metrics through precision-recall curves, confusion matrices, and visual validation results provide deeper insights into model behavior.
 
-Figure \ref{fig:pr_curve} shows the precision-recall curve achieving mAP@0.5 of 0.937. Precision remains at 1.0 across recall up to 0.9, indicating accurate detections with few false positives over most of the operating range. The drop above 0.9 suggests capturing the final instances requires accepting some false positives.
+Figure \ref{fig:pr_curve} shows the precision-recall curve achieving mAP@0.5 of 0.937. Precision remained at 1.0 across recall up to 0.9, indicating accurate detections with few false positives over most of the operating range. The drop above 0.9 suggested that capturing the final instances required accepting some false positives.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.45\textwidth]{pr_curve.png}}
@@ -178,7 +176,7 @@ Figure \ref{fig:pr_curve} shows the precision-recall curve achieving mAP@0.5 of 
 \label{fig:pr_curve}
 \end{figure}
 
-Figure \ref{fig:confusion} shows the normalized confusion matrix. The true positive rate for cheetahs is 87\%, with a 12\% background false positive rate, indicating good discrimination and low false detections.
+Figure \ref{fig:confusion} shows the normalized confusion matrix. The true positive rate for cheetahs was 87\%, with a 12\% background false positive rate, indicating good discrimination and low false detections.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.35\textwidth]{confusion_matrix.png}}
@@ -186,7 +184,7 @@ Figure \ref{fig:confusion} shows the normalized confusion matrix. The true posit
 \label{fig:confusion}
 \end{figure}
 
-Figure \ref{fig:validation_batch} shows predictions on a validation batch. All 16 images show successful detection with confidence 0.9–1.0 across varied poses, occlusion, multiple cheetahs, and lighting conditions.
+Figure \ref{fig:validation_batch} shows predictions on a validation batch. All 16 images showed successful detection with confidence 0.9–1.0 across varied poses, occlusion, multiple cheetahs, and lighting conditions.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=0.45\textwidth]{validation_predictions.png}}
@@ -198,7 +196,7 @@ Together, these analyses confirm strong single-object performance and reliable p
 
 \section{Critical Analysis and Conclusion}
 
-I achieved strong results in single-cheetah detection, but reaching these results required extensive fine-tuning and experimentation across multiple training runs. I conducted numerous trials varying batch sizes (16 to 95), epochs (30 to 100), and hyperparameters before settling on the optimal configuration. The model performs well in live detection scenarios including video inference, maintaining high confidence scores across diverse poses, lighting conditions, and partial occlusion, demonstrating practical utility for wildlife monitoring applications with minimal computational overhead at inference time.
+Strong results were achieved in single-cheetah detection, but reaching these results required extensive fine-tuning and experimentation across multiple training runs. Numerous trials were conducted varying batch sizes (16 to 95), epochs (30 to 100), and hyperparameters before settling on the optimal configuration. The model performs well in live detection scenarios including video inference, maintaining high confidence scores across diverse poses, lighting conditions, and partial occlusion, demonstrating practical utility for wildlife monitoring applications with minimal computational overhead at inference time.
 
 Several limitations emerged during development. Training required an RTX 4060 GPU, and achieving optimal performance necessitated large batch sizes (95) that many standard hardware configurations cannot support. Determining the optimal hyperparameter combination (batch=95, epochs=100, loss weights, confidence thresholds) required analyzing results from over 20 distinct training runs, consuming significant computational resources and development time. The model fails on multi-cheetah scenes (0\% accuracy) with default parameters. While manual parameter tuning (image size and confidence threshold) achieved successful multi-object detection for specific images, this approach lacks generalizability and requires case-by-case optimization. Additionally, the model requires precise threshold selection (confidence=0.35, IoU=0.55) to achieve optimal performance, limiting deployment flexibility. Insufficient training data (379 images) constrained effective generalization for complex scenarios like multiple overlapping animals or varied occlusions.
 

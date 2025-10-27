@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.6)  27 OCT 2025 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.6)  27 OCT 2025 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,15 +329,9 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 (C:\Users\mnrrn\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1881) in paragraph at lines 39--40
-[]\OT1/ptm/m/n/10 Critical chal-lenges in-clude gen-er-al-iz-ing across di-vers
-e
- []
 
 
-
-
-Underfull \hbox (badness 1383) in paragraph at lines 49--50
+Underfull \hbox (badness 1383) in paragraph at lines 47--48
 \OT1/ptm/m/n/10 adds Pro-grammable Gra-di-ent In-for-ma-tion (PGI) and the
  []
 
@@ -350,7 +344,7 @@ rrn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 ]
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-3.
+1.
 (C:\Users\mnrrn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -360,136 +354,110 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 File: enhanced_validation_batch16.png Graphic file (type png)
 <use enhanced_validation_batch16.png>
 Package pdftex.def Info: enhanced_validation_batch16.png  used on input line 10
-2.
+0.
 (pdftex.def)             Requested size: 232.19843pt x 138.70863pt.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-[]\OT1/ptm/m/n/10 My cus-tom train-ing pipeline class
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+[]\OT1/ptm/m/n/10 The cus-tom train-ing pipeline class
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-\OT1/ptm/m/n/10 (`YOLOv12CheetahTrainer`) im-ple-ments seed=42 for
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+\OT1/ptm/m/n/10 (`YOLOv12CheetahTrainer`) im-ple-mented seed=42 for
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 111--112
-\OT1/ptm/m/n/10 (AMP), and dis-ables mo-saic aug-men-ta-tion in the last
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+[]\OT1/ptm/m/n/10 The im-ple-men-ta-tion uses a cus-tom
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 111--112
-\OT1/ptm/m/n/10 un-re-al-is-tic spa-tial re-la-tion-ships and bound-ary ar-ti-f
-acts.
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 111--112
-\OT1/ptm/m/n/10 bound-ing box ac-cu-racy and re-duc-ing false pos-i-tives by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-[]\OT1/ptm/m/n/10 My im-ple-men-ta-tion uses a cus-tom
- []
-
-
-Underfull \hbox (badness 3492) in paragraph at lines 115--116
+Underfull \hbox (badness 3492) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 and for-mat com-pli-ance; (2) dataset anal-y-sis|computes
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 115--116
+Underfull \hbox (badness 4543) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 bound-ing box statis-tics and cre-ates vi-su-al-iza-tions; (3)
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 115--116
+Underfull \hbox (badness 5756) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 model train-ing|loads COCO-pretrained YOLOv12-nano
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 115--116
+Underfull \hbox (badness 3068) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 weights and trains for 100 epochs; (4) val-i-da-tion on
  []
 
 
-Underfull \hbox (badness 7451) in paragraph at lines 115--116
+Underfull \hbox (badness 7451) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 (5) thresh-old sweep|automatically de-ter-mines op-ti-mal
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 115--116
+Underfull \hbox (badness 2213) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 con-fi-dence thresh-old (0.35) via grid search; (6) model
  []
 
 
-Underfull \vbox (badness 2277) has occurred while \output is active []
-
-
 
 [3 <./enhanced_validation_batch16.png>]
-
-<training_results.png, id=19, 867.24pt x 433.62pt>
+<training_results.png, id=20, 867.24pt x 433.62pt>
 File: training_results.png Graphic file (type png)
 <use training_results.png>
-Package pdftex.def Info: training_results.png  used on input line 140.
+Package pdftex.def Info: training_results.png  used on input line 138.
 (pdftex.def)             Requested size: 232.19843pt x 116.0931pt.
 
-Underfull \hbox (badness 2080) in paragraph at lines 145--146
+Underfull \hbox (badness 2080) in paragraph at lines 143--144
 []\OT1/ptm/m/n/10 Figure 3[] presents val-i-da-tion ac-cu-racy anal-y-sis acros
 s
  []
 
-<validation_curves.png, id=20, 1149.093pt x 859.2903pt>
+<validation_curves.png, id=21, 1149.093pt x 859.2903pt>
 File: validation_curves.png Graphic file (type png)
 <use validation_curves.png>
-Package pdftex.def Info: validation_curves.png  used on input line 148.
+Package pdftex.def Info: validation_curves.png  used on input line 146.
 (pdftex.def)             Requested size: 232.19843pt x 173.6382pt.
 
-Underfull \hbox (badness 3098) in paragraph at lines 155--156
-[]\OT1/ptm/m/n/10 Final met-rics from the test set: mAP@0.5: 0.8201,
- []
 
-<enhanced_validation.png, id=21, 1438.4139pt x 859.2903pt>
+<enhanced_validation.png, id=22, 1438.4139pt x 859.2903pt>
 File: enhanced_validation.png Graphic file (type png)
 <use enhanced_validation.png>
-Package pdftex.def Info: enhanced_validation.png  used on input line 160.
+Package pdftex.def Info: enhanced_validation.png  used on input line 158.
 (pdftex.def)             Requested size: 206.39685pt x 123.28928pt.
 
 
-[4 <./training_results.png>]
-
-
-Underfull \hbox (badness 3713) in paragraph at lines 173--174
+[4 <./training_results.png> <./validation_curves.png> <./enhanced_validation.pn
+g>]
+Underfull \hbox (badness 3713) in paragraph at lines 171--172
 []\OT1/ptm/m/n/10 Figure 5[] shows the precision-recall curve achiev-ing
  []
 
-<pr_curve.png, id=30, 650.43pt x 433.62pt>
+<pr_curve.png, id=32, 650.43pt x 433.62pt>
 File: pr_curve.png Graphic file (type png)
 <use pr_curve.png>
-Package pdftex.def Info: pr_curve.png  used on input line 176.
+Package pdftex.def Info: pr_curve.png  used on input line 174.
 (pdftex.def)             Requested size: 232.19843pt x 154.79962pt.
-<confusion_matrix.png, id=31, 867.24pt x 650.43pt>
+<confusion_matrix.png, id=33, 867.24pt x 650.43pt>
 File: confusion_matrix.png Graphic file (type png)
 <use confusion_matrix.png>
-Package pdftex.def Info: confusion_matrix.png  used on input line 184.
+Package pdftex.def Info: confusion_matrix.png  used on input line 182.
 (pdftex.def)             Requested size: 180.60315pt x 135.44305pt.
-<validation_predictions.png, id=32, 1798.72pt x 1798.72pt>
+<validation_predictions.png, id=34, 1798.72pt x 1798.72pt>
 File: validation_predictions.png Graphic file (type png)
 <use validation_predictions.png>
-Package pdftex.def Info: validation_predictions.png  used on input line 192.
+Package pdftex.def Info: validation_predictions.png  used on input line 190.
 (pdftex.def)             Requested size: 232.19843pt x 232.19504pt.
 
 
-[5 <./validation_curves.png> <./enhanced_validation.png> <./pr_curve.png> <./co
-nfusion_matrix.png>]
 
 
+[5 <./pr_curve.png> <./confusion_matrix.png> <./validation_predictions.png>]
 
-[6 <./validation_predictions.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -503,24 +471,16 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-
-
-[7
-
-] (Assignment2.aux)
+[6] (Assignment2.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  4376 strings out of 468133
  70050 string characters out of 5430713
- 482886 words of memory out of 5000000
+ 481886 words of memory out of 5000000
  32952 multiletter control sequences out of 15000+600000
  663537 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -535,9 +495,9 @@ s/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/mnrrn/AppData/Local/Program
 s/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/mnrrn/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/mnrrn/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Assignment2.pdf (7 pages, 3238812 bytes).
+Output written on Assignment2.pdf (6 pages, 3236575 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
