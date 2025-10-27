@@ -1,0 +1,180 @@
+{
+  "overall_metrics": {
+    "precision": 0.875,
+    "recall": 0.875,
+    "f1_score": 0.875,
+    "total_predictions": 24,
+    "total_ground_truth": 24,
+    "correct_detections": 21
+  },
+  "per_image_results": [
+    {
+      "image": "09e82fb8-cheetah_722_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "18033f28-cheetah_730_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "1ee4ed0c-cheetah_724_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "30460079-cheetah_714_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "30cf1446-cheetah_728_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "3a24836b-cheetah_723_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "45004d30-cheetah_720_resized.jpg",
+      "predictions_count": 2,
+      "ground_truth_count": 2,
+      "matches": 1,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    {
+      "image": "463f5ae7-cheetah_716_resized.jpg",
+      "predictions_count": 2,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 0.5,
+      "recall": 1.0
+    },
+    {
+      "image": "4f48f8ec-cheetah_727_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "6fd6d214-cheetah_732_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "748870d0-cheetah_721_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "90e79247-cheetah_715_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "916b9dd9-cheetah_725_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "9a485a7f-cheetah_734_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 2,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 0.5
+    },
+    {
+      "image": "9ae81db1-cheetah_718_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "a259057e-cheetah_717_resized.jpg",
+      "predictions_count": 2,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 0.5,
+      "recall": 1.0
+    },
+    {
+      "image": "ab530c2a-cheetah_729_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "ac31d9c7-cheetah_733_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "cf0e1bda-cheetah_731_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 2,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 0.5
+    },
+    {
+      "image": "e77bc349-cheetah_726_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "image": "f50a9c1f-cheetah_719_resized.jpg",
+      "predictions_count": 1,
+      "ground_truth_count": 1,
+      "matches": 1,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  ]
+}

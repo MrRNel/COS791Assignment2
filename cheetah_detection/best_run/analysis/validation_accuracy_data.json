@@ -1,0 +1,41 @@
+{
+  "performance_summary": {
+    "precision": {
+      "initial": 0.0,
+      "final": 1.0,
+      "best": 1.0,
+      "improvement": 0
+    },
+    "recall": {
+      "initial": 0.0,
+      "final": 0.875,
+      "best": 0.875,
+      "improvement": 0
+    },
+    "mAP50": {
+      "initial": 0.0,
+      "final": 0.9374,
+      "best": 0.9374,
+      "improvement": 0
+    },
+    "mAP50-95": {
+      "initial": 0.0,
+      "final": 0.75781,
+      "best": 0.79524,
+      "improvement": 0
+    }
+  },
+  "total_epochs": 100,
+  "final_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.875,
+    "metrics/mAP50(B)": 0.9374,
+    "metrics/mAP50-95(B)": 0.75781
+  },
+  "best_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.875,
+    "metrics/mAP50(B)": 0.9374,
+    "metrics/mAP50-95(B)": 0.79524
+  }
+}

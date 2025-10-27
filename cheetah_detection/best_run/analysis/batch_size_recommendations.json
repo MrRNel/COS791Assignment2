@@ -1,0 +1,101 @@
+{
+  "focus_models": [
+    "YOLOv12n",
+    "YOLOv12s"
+  ],
+  "current_model": "YOLOv12n",
+  "current_batch_size": 95,
+  "recommended_batch_sizes": {
+    "n": 32,
+    "s": 32
+  },
+  "memory_usage_gb": {
+    "n": [
+      0.75,
+      1.5,
+      3.0,
+      6.0,
+      12.0
+    ],
+    "s": [
+      1.5,
+      3.0,
+      6.0,
+      12.0,
+      24.0
+    ]
+  },
+  "speed_estimation": {
+    "n": [
+      50.0,
+      100.0,
+      200.0,
+      400.0,
+      800.0
+    ],
+    "s": [
+      40.0,
+      80.0,
+      160.0,
+      320.0,
+      640.0
+    ]
+  },
+  "confidence_predictions": {
+    "n": [
+      0.1425,
+      0.15,
+      0.1575,
+      0.162,
+      0.165
+    ],
+    "s": [
+      0.17099999999999999,
+      0.18,
+      0.189,
+      0.19440000000000002,
+      0.198
+    ]
+  },
+  "detection_rate_predictions": {
+    "n": [
+      0.108,
+      0.12,
+      0.1296,
+      0.13440000000000002,
+      0.13799999999999998
+    ],
+    "s": [
+      0.135,
+      0.15,
+      0.162,
+      0.168,
+      0.1725
+    ]
+  },
+  "efficiency_scores": {
+    "n": [
+      1.0259999999999998,
+      1.2,
+      1.3608,
+      1.4515200000000001,
+      0
+    ],
+    "s": [
+      0.6156,
+      0.7199999999999999,
+      0.81648,
+      0.8709120000000001,
+      0
+    ]
+  },
+  "batch_size_impact": {
+    "confidence_improvement": "Larger batch sizes provide more stable gradients, leading to higher confidence scores",
+    "detection_rate_improvement": "Larger batches improve generalization and detection rate",
+    "memory_constraints": "YOLOv12n can use batch size 64, YOLOv12s limited to batch size 32",
+    "optimal_recommendations": {
+      "YOLOv12n": "Batch size 32 for best efficiency",
+      "YOLOv12s": "Batch size 32 for best efficiency"
+    }
+  }
+}

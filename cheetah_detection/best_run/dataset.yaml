@@ -1,0 +1,7 @@
+names:
+- Cheetah
+nc: 1
+path: C:\Code\COS791Assignment2_attempt2
+test: cheetah_data\cheetah_test
+train: cheetah_data\cheetah_training_labled\images
+val: cheetah_data\cheeta_train_validation_labled\images

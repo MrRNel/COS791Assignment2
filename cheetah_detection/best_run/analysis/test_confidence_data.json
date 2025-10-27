@@ -1,0 +1,382 @@
+{
+  "image_analysis": [
+    {
+      "image_idx": 1,
+      "image_name": "00000012.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 2,
+      "image_name": "00000015.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 3,
+      "image_name": "00000020.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 4,
+      "image_name": "00000021.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 5,
+      "image_name": "00000075.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 6,
+      "image_name": "00000090.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 7,
+      "image_name": "00000092.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 8,
+      "image_name": "00000093.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 9,
+      "image_name": "cheetah_371_resized.jpg",
+      "avg_confidence": 0.9561750888824463,
+      "max_confidence": 0.9561750888824463,
+      "min_confidence": 0.9561750888824463,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 10,
+      "image_name": "cheetah_372_resized.jpg",
+      "avg_confidence": 0.9021883010864258,
+      "max_confidence": 0.9021883010864258,
+      "min_confidence": 0.9021883010864258,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 11,
+      "image_name": "cheetah_373_resized.jpg",
+      "avg_confidence": 0.9346044659614563,
+      "max_confidence": 0.9346044659614563,
+      "min_confidence": 0.9346044659614563,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 12,
+      "image_name": "cheetah_374_resized.jpg",
+      "avg_confidence": 0.8818533420562744,
+      "max_confidence": 0.8818533420562744,
+      "min_confidence": 0.8818533420562744,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 13,
+      "image_name": "cheetah_375_resized.jpg",
+      "avg_confidence": 0.9145022034645081,
+      "max_confidence": 0.9145022034645081,
+      "min_confidence": 0.9145022034645081,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 14,
+      "image_name": "cheetah_376_resized.jpg",
+      "avg_confidence": 0.9060730934143066,
+      "max_confidence": 0.9060730934143066,
+      "min_confidence": 0.9060730934143066,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 15,
+      "image_name": "cheetah_377_resized.jpg",
+      "avg_confidence": 0.9256100654602051,
+      "max_confidence": 0.9256100654602051,
+      "min_confidence": 0.9256100654602051,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 16,
+      "image_name": "cheetah_378_resized.jpg",
+      "avg_confidence": 0.9153568148612976,
+      "max_confidence": 0.9153568148612976,
+      "min_confidence": 0.9153568148612976,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 17,
+      "image_name": "cheetah_379_resized.jpg",
+      "avg_confidence": 0.9430356025695801,
+      "max_confidence": 0.9430356025695801,
+      "min_confidence": 0.9430356025695801,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 18,
+      "image_name": "cheetah_380_resized.jpg",
+      "avg_confidence": 0.9316360950469971,
+      "max_confidence": 0.9316360950469971,
+      "min_confidence": 0.9316360950469971,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 19,
+      "image_name": "cheetah_381_resized.jpg",
+      "avg_confidence": 0.943364143371582,
+      "max_confidence": 0.943364143371582,
+      "min_confidence": 0.943364143371582,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 20,
+      "image_name": "cheetah_382_resized.jpg",
+      "avg_confidence": 0.9307642579078674,
+      "max_confidence": 0.9307642579078674,
+      "min_confidence": 0.9307642579078674,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 21,
+      "image_name": "cheetah_383_resized.jpg",
+      "avg_confidence": 0.9271339774131775,
+      "max_confidence": 0.9271339774131775,
+      "min_confidence": 0.9271339774131775,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 22,
+      "image_name": "cheetah_384_resized.jpg",
+      "avg_confidence": 0.8788277506828308,
+      "max_confidence": 0.8788277506828308,
+      "min_confidence": 0.8788277506828308,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 23,
+      "image_name": "cheetah_385_resized.jpg",
+      "avg_confidence": 0.8474633097648621,
+      "max_confidence": 0.8474633097648621,
+      "min_confidence": 0.8474633097648621,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 24,
+      "image_name": "cheetah_386_resized.jpg",
+      "avg_confidence": 0.8776887059211731,
+      "max_confidence": 0.8776887059211731,
+      "min_confidence": 0.8776887059211731,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 25,
+      "image_name": "cheetah_387_resized.jpg",
+      "avg_confidence": 0.8700958490371704,
+      "max_confidence": 0.8700958490371704,
+      "min_confidence": 0.8700958490371704,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 26,
+      "image_name": "cheetah_388_resized.jpg",
+      "avg_confidence": 0.871984601020813,
+      "max_confidence": 0.871984601020813,
+      "min_confidence": 0.871984601020813,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 27,
+      "image_name": "cheetah_389_resized.jpg",
+      "avg_confidence": 0.894305408000946,
+      "max_confidence": 0.894305408000946,
+      "min_confidence": 0.894305408000946,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 28,
+      "image_name": "cheetah_390_resized.jpg",
+      "avg_confidence": 0.9390326738357544,
+      "max_confidence": 0.9390326738357544,
+      "min_confidence": 0.9390326738357544,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 29,
+      "image_name": "cheetah_391_resized.jpg",
+      "avg_confidence": 0.954675018787384,
+      "max_confidence": 0.954675018787384,
+      "min_confidence": 0.954675018787384,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 30,
+      "image_name": "cheetah_392_resized.jpg",
+      "avg_confidence": 0.8444710373878479,
+      "max_confidence": 0.8444710373878479,
+      "min_confidence": 0.8444710373878479,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 31,
+      "image_name": "cheetah_393_resized.jpg",
+      "avg_confidence": 0.9427374601364136,
+      "max_confidence": 0.9427374601364136,
+      "min_confidence": 0.9427374601364136,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 32,
+      "image_name": "cheetah_394_resized.jpg",
+      "avg_confidence": 0.9411802887916565,
+      "max_confidence": 0.9411802887916565,
+      "min_confidence": 0.9411802887916565,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 33,
+      "image_name": "cheetah_395_resized.jpg",
+      "avg_confidence": 0.955528974533081,
+      "max_confidence": 0.955528974533081,
+      "min_confidence": 0.955528974533081,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 34,
+      "image_name": "cheetah_396_resized.jpg",
+      "avg_confidence": 0.7531049251556396,
+      "max_confidence": 0.7531049251556396,
+      "min_confidence": 0.7531049251556396,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 35,
+      "image_name": "cheetah_397_resized.jpg",
+      "avg_confidence": 0.924606204032898,
+      "max_confidence": 0.924606204032898,
+      "min_confidence": 0.924606204032898,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 36,
+      "image_name": "cheetah_398_resized.jpg",
+      "avg_confidence": 0.909860372543335,
+      "max_confidence": 0.909860372543335,
+      "min_confidence": 0.909860372543335,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 37,
+      "image_name": "cheetah_399_resized.jpg",
+      "avg_confidence": 0.9072749614715576,
+      "max_confidence": 0.9072749614715576,
+      "min_confidence": 0.9072749614715576,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 38,
+      "image_name": "cheetah_400_resized.jpg",
+      "avg_confidence": 0.8122168183326721,
+      "max_confidence": 0.8122168183326721,
+      "min_confidence": 0.8122168183326721,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 39,
+      "image_name": "cheetah_401_resized.jpg",
+      "avg_confidence": 0.7476409673690796,
+      "max_confidence": 0.7476409673690796,
+      "min_confidence": 0.7476409673690796,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 40,
+      "image_name": "cheetah_735_resized.jpg",
+      "avg_confidence": 0.8487954139709473,
+      "max_confidence": 0.8487954139709473,
+      "min_confidence": 0.8487954139709473,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 41,
+      "image_name": "cheetah_736_resized.jpg",
+      "avg_confidence": 0.9398065209388733,
+      "max_confidence": 0.9398065209388733,
+      "min_confidence": 0.9398065209388733,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 42,
+      "image_name": "cheetah_737_resized.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 43,
+      "image_name": "cheetah_738_resized.jpg",
+      "avg_confidence": 0.9427573680877686,
+      "max_confidence": 0.9427573680877686,
+      "min_confidence": 0.9427573680877686,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 44,
+      "image_name": "cheetah_739_resized.jpg",
+      "avg_confidence": 0.0,
+      "max_confidence": 0.0,
+      "min_confidence": 0.0,
+      "num_detections": 0
+    },
+    {
+      "image_idx": 45,
+      "image_name": "cheetah_740_resized.jpg",
+      "avg_confidence": 0.956322968006134,
+      "max_confidence": 0.956322968006134,
+      "min_confidence": 0.956322968006134,
+      "num_detections": 1
+    },
+    {
+      "image_idx": 46,
+      "image_name": "cheetah_741_resized.jpg",
+      "avg_confidence": 0.9553877115249634,
+      "max_confidence": 0.9553877115249634,
+      "min_confidence": 0.9553877115249634,
+      "num_detections": 1
+    }
+  ],
+  "overall_statistics": {
+    "mean_confidence": 0.7071317991484767,
+    "std_confidence": 0.37550763070290416,
+    "min_confidence": 0.0,
+    "max_confidence": 0.956322968006134,
+    "total_images": 46,
+    "images_with_detections": 36,
+    "images_without_detections": 10
+  },
+  "detection_correlation": 0.9924996229131706
+}

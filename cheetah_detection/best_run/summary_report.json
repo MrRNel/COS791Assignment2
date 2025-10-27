@@ -1,0 +1,173 @@
+{
+  "timestamp": "20251026_150504",
+  "model_size": "n",
+  "dataset_validation": {
+    "overall_metrics": {
+      "precision": 0,
+      "recall": 0,
+      "f1_score": 0,
+      "total_predictions": 0,
+      "total_ground_truth": 0,
+      "correct_detections": 0
+    },
+    "per_image_results": []
+  },
+  "dataset_analysis": {
+    "train": {
+      "split": "Training",
+      "image_stats": {
+        "count": 379,
+        "width_mean": 400.0,
+        "width_std": 0.0,
+        "height_mean": 400.0,
+        "height_std": 0.0,
+        "aspect_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "label_stats": {
+        "total_objects": 371,
+        "images_with_objects": 371,
+        "objects_per_image_mean": 0.978891820580475,
+        "objects_per_image_std": 0.14374499706465682
+      },
+      "bbox_stats": {
+        "area_mean": 0.5867043153891334,
+        "area_std": 0.2117014150216105,
+        "ratio_mean": 0.9857850497791272,
+        "ratio_std": 0.28248192848107617
+      }
+    },
+    "val": {
+      "split": "Validation",
+      "image_stats": {
+        "count": 21,
+        "width_mean": 400.0,
+        "width_std": 0.0,
+        "height_mean": 400.0,
+        "height_std": 0.0,
+        "aspect_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "label_stats": {
+        "total_objects": 24,
+        "images_with_objects": 21,
+        "objects_per_image_mean": 1.1428571428571428,
+        "objects_per_image_std": 0.34992710611188255
+      },
+      "bbox_stats": {
+        "area_mean": 0.43612867353875395,
+        "area_std": 0.19361551052653939,
+        "ratio_mean": 1.1028522049364458,
+        "ratio_std": 0.32413410717477126
+      }
+    },
+    "timestamp": "20251026_150504"
+  },
+  "training_summary": {
+    "epochs": 100,
+    "batch_size": 95,
+    "image_size": 400,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001
+  },
+  "enhanced_validation": {
+    "precision": 1.0,
+    "recall": 0.8974358974358975,
+    "f1_score": 0.945945945945946,
+    "tiger_images": {
+      "total": 8,
+      "false_positives": 0,
+      "accuracy": 1.0
+    },
+    "single_cheetah": {
+      "total": 37,
+      "correct": 35,
+      "accuracy": 0.9459459459459459
+    },
+    "multi_cheetah": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "total_errors": 3
+  },
+  "test_summary": {
+    "test_images": 46
+  },
+  "inference": {
+    "conf": 0.7,
+    "iou": 0.3,
+    "max_det": 10
+  }
+}

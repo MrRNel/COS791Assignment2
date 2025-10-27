@@ -1,0 +1,122 @@
+{
+  "train": {
+    "split": "Training",
+    "image_stats": {
+      "count": 379,
+      "width_mean": 400.0,
+      "width_std": 0.0,
+      "height_mean": 400.0,
+      "height_std": 0.0,
+      "aspect_ratios": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "label_stats": {
+      "total_objects": 371,
+      "images_with_objects": 371,
+      "objects_per_image_mean": 0.978891820580475,
+      "objects_per_image_std": 0.14374499706465682
+    },
+    "bbox_stats": {
+      "area_mean": 0.5867043153891334,
+      "area_std": 0.2117014150216105,
+      "ratio_mean": 0.9857850497791272,
+      "ratio_std": 0.28248192848107617
+    }
+  },
+  "val": {
+    "split": "Validation",
+    "image_stats": {
+      "count": 21,
+      "width_mean": 400.0,
+      "width_std": 0.0,
+      "height_mean": 400.0,
+      "height_std": 0.0,
+      "aspect_ratios": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "label_stats": {
+      "total_objects": 24,
+      "images_with_objects": 21,
+      "objects_per_image_mean": 1.1428571428571428,
+      "objects_per_image_std": 0.34992710611188255
+    },
+    "bbox_stats": {
+      "area_mean": 0.43612867353875395,
+      "area_std": 0.19361551052653939,
+      "ratio_mean": 1.1028522049364458,
+      "ratio_std": 0.32413410717477126
+    }
+  },
+  "timestamp": "20251026_150504"
+}

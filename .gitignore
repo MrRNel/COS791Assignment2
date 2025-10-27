@@ -1,6 +1,11 @@
 venv/
 cheetah_detection/*
+!cheetah_detection/best_run/
+!cheetah_detection/best_run/best_cheetah_model.pt
 cheetah_finetune/*
 video_detection/*
 .cursor
 .gradio
+__pycache__/
+*.log
+.pytest_cache/
